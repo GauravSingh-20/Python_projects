@@ -1,6 +1,6 @@
-from menu import Menu, MenuItem
-from Coffee_Maker import CoffeeMaker
-from money_machine import MoneyMachine
+from Day16.OOP_CoffeeMachine.menu import Menu, MenuItem
+from Day16.OOP_CoffeeMachine.Coffee_Maker import CoffeeMaker
+from Day16.OOP_CoffeeMachine.money_machine import MoneyMachine
 
 money_machine=MoneyMachine()
 coffee_maker=CoffeeMaker()
@@ -20,3 +20,5 @@ while isON:
         money_machine.report()
     else:
         drink=menu.find_drink(choice)
+        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+            coffee_maker.make_coffee(drink)
