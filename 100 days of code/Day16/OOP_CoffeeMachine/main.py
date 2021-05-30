@@ -1,6 +1,6 @@
-from Day16.OOP_CoffeeMachine.menu import Menu, MenuItem
-from Day16.OOP_CoffeeMachine.Coffee_Maker import CoffeeMaker
-from Day16.OOP_CoffeeMachine.money_machine import MoneyMachine
+from menu import Menu, MenuItem
+from Coffee_Maker import CoffeeMaker
+from money_machine import MoneyMachine
 
 money_machine=MoneyMachine()
 coffee_maker=CoffeeMaker()
